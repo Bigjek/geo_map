@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>{{htmlWebpackPlugin.options.title}}</title>
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+    <script src='//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+  </head>
+  <body>
+    <div class="sprite" style="display: none">
+      {{> "./svg.hbs"}}
+    </div>
+  <div id="map"></div>
+    <div class="modal">
+      <div class="modal__title">
+        <div class="modal__title-icon">
+          <svg class="close-cross" width="15" height="15">
+            <use class="close-cross__use" xlink:href="#maps" />
+          </svg>
+        </div>
+        <div class="modal__title-name">Москва, ул. Ленина</div>
+        <button class="modal__title-close">
+          <svg class="close-cross" width="15" height="15">
+            <use class="close-cross__use" xlink:href="#cross" />
+          </svg>
+        </button>
+      </div>
+      <div class="modal__body comment">
+        <ul class="comment__list">
+          Отзывов пока нет...
+          {{> "./listIndex.hbs"}}
+        </ul>
+        <div class="comment__forms">
+          <div class="comment__form">
+            <div class="comment__form-title">Ваш отзыв</div>
+            <input type="text" name="" id="marker_name" placeholder="Ваше имя">
+            <input type="text" name="" id="marker_address" placeholder="Укажите место">
+            <textarea name="" id="marker_balloontext" cols="30" rows="10" placeholder="Поделитесь впечатлениями"></textarea>
+            <div class="comment-sub">
+              <button id="marker_sub" type="submit">Добавить</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

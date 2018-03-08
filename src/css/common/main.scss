@@ -1,0 +1,107 @@
+#buttons{
+    position: absolute;
+    bottom: 0;
+}
+.modal{
+    display: none;
+    position: absolute;
+    width: 380px;
+    top: 0;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    &__title{
+        background: #ff8663;
+        color: #fff;
+        display: flex;
+        padding: 12px;
+        align-items: center;
+        justify-content: space-between;
+        &-name{
+            font-size: 12px;
+            width: 100%;
+            padding-left: 10px;
+        }
+        &-close{
+            border: 0;
+            background: none;
+            cursor: pointer;
+        }
+        &-icon{
+            .close-cross{
+                transform: rotate(0deg);
+            }
+        }
+    }
+}
+.close-cross{
+    fill: #fff;
+    transform: rotate(45deg);
+}
+.comment{
+    &__list{
+        padding: 15px 0;
+        list-style: none;
+        border-bottom: 1px solid #f0f0f0;
+        margin: 0 15px;
+        height: 155px;
+        overflow-y: auto;
+    }
+    &__body{
+        padding: 10px 0 25px;
+    }
+    &__item{
+
+    }
+    &__title{
+        &-name{
+
+        }
+        &-place{
+            color: #4f4f4f;
+        }
+        &-date{
+            color: #4f4f4f;
+        }
+    }
+    &__forms{
+        padding: 15px;
+        display: flex;
+    }
+    &-sub{
+        display: flex;
+        justify-content: flex-end;
+    }
+    &__form{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        &-title{
+            font-size: 16px;
+            color: #ff8663;
+            text-transform: uppercase;
+            margin-bottom: 14px;
+        }
+        input, textarea{
+            color: #c4c4c4;
+            border: 1px solid #c4c4c4;
+            padding: 8px 15px;
+            border-radius: 20px;
+            margin-bottom: 14px;
+            width: 100%;
+            font-size: 14px;
+            font-family: inherit;
+        }
+        textarea{
+            height: 130px;
+            overflow: hidden;
+        }
+        button{
+            background: #ff8663;
+            border: 0;
+            color: #fff;
+            padding: 8px 15px;
+            border-radius: 8px;
+        }
+    }
+}

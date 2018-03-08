@@ -1,0 +1,12 @@
+{{#each list}}
+    <li class="comment__item">
+        <div class="comment__title">
+            <strong class="comment__title-name">{{name}}</strong>
+            <span class="comment__title-place">{{address}}</span>
+            <span class="comment__title-date">{{date}}</span>
+        </div>
+        <div class="comment__body">
+            {{description}}
+        </div>
+    </li>
+{{/each}}
